@@ -32,7 +32,7 @@ exports.getTodoById = (req, res) => {
   const dataTodoById = todoList.find((todo) => todo.id == idParam);
 
   if (!dataTodoById) {
-    return res.send({
+    return res.status(400).send({
       response: "Fail",
       message: `Data with ID ${idParam} Not Found!`,
       data: null,
