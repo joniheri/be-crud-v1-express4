@@ -10,13 +10,14 @@ app.use(cors());
 // ==============================================
 // Routing
 // ==============================================
+
 app.get("/", (req, res) => {
   res.send("Hello World!!. I'm Express.JS");
 });
 
 // Import Routes
-const routerv1 = require("./src/routers/RouterV1");
-// const routerv2 = require("./src/routers/RouterV2");
+const routerv1 = require("./src/routes/RouterV1");
+const routerv2 = require("./src/routes/RouterV2");
 
 // Group Route
 app.use("/api/v1", routerv1);
